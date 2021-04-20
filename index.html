@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BITS login Form</title>
+    <script type="text/javascript" src="../1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../1/css/bootstrap.min.css">
+    <script>
+        function login() {
+            var uname = document.getElementById("username").value;
+            var pwd = document.getElementById("password").value;
+            var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+            if (uname == 'admin' && pwd == 'admin') {
+                alert("Login successfully!");
+            }
+            else if (uname == '' || pwd == '') {}
+            else if (uname != 'admin' && pwd != 'admin') {
+                alert('Please enter correct username and password.');
+
+            }
+        }
+    </script>
+    <style>
+
+        Body {
+            font-family: Calibri, Helvetica, sans-serif;
+            background-color: aliceblue;
+        }
+
+        button:hover {
+            opacity: 0.7;
+        }
+
+        .container {
+            margin: auto;
+            width: 50%;
+            padding: 10px;
+        }
+
+        .divSubmit {
+            padding: 10px;
+
+        }
+        span{color:red}
+    </style>
+</head>
+
+<body>
+    <br />
+    <center>
+        <img src="../1/images/logo2.png" alt="BITS Pilani WILP" >
+    </center>
+    <br />
+    <div class="container border border-primary rounded">
+        <form>
+            <div>
+                <center>
+                    <h3 class="display-5">
+                        Cloud Assignment - Login screen
+                    </h3>
+                </center>
+            </div>
+            <div class="form-group">
+                <label for="username" class="form-label">Username</label>
+                <span>*</span>
+                <div class="input-group has-validation">
+                    <input type="text" class="form-control" id="username" aria-describedby="inputGroupPrepend" width="30" required>
+                    <div class="invalid-feedback">
+                        Please choose a username.
+                    </div>
+                </div>
+            </div>
+            <div class="invalid-feedback">
+                Please enter username.
+            </div>
+            <div class="form-group">
+                <label for="password" class="form-label">Password</label>
+                <span>*</span>
+                <div class="input-group has-validation">
+                    <input type="text" class="form-control" id="password" aria-describedby="inputGroupPrepend" required>
+                    <div class="invalid-feedback">
+                        Please enter password.
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <button type="submit" onclick="login()" class="btn btn-primary">Submit</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
