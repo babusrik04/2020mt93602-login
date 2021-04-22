@@ -26,7 +26,7 @@
                 $("#div_login").hide(1000);
                 $("#div_success").show(1000);
             }
-            else if (uname == '' || pwd == '') { }
+            else if (uname == '' || pwd == '') { return;}
             else if (uname != 'sreekanth' && pwd != 'password') {
                 alert('Please enter correct username and password.');
 
@@ -98,7 +98,7 @@
         </div>
         <hr />
         <div id="div_login">
-            
+            <form>
                 <div>
                     <center>
                         <h3 class="display-5">
@@ -132,7 +132,7 @@
                 <div class="text-center">
                     <button type="submit" style="font-size:25px" onclick="login()" class="btn btn-primary">Submit</button>
                 </div>
-            
+            </form>
         </div>
         <div id="div_success">
             <center>
